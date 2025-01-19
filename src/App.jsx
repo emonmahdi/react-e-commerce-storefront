@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
-import products from "./data/products";
+// import products from "./data/products";
 // import Navbar from "./components/Navbar";
 
 const App = () => {
+  const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
@@ -32,12 +33,38 @@ const App = () => {
     );
   };
 
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.products); // Logs the array of products
+        setProducts(data.products); // Set only the array of products
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      });
+  }, []);
+
   return (
     <>
       {/* <Navbar /> */}
       <div style={{ padding: "20px" }}>
         <h1>E-commerce Storefront</h1>
-        <ProductList products={products} addToCart={addToCart} />
+        <h1>Product List</h1>
+        <div className="product-grid">
+          {products?.length > 0 ? (
+            products.map((product) => (
+              <ProductList
+                key={product.id}
+                product={product}
+                addToCart={addToCart}
+              />
+            ))
+          ) : (
+            <p>Loading products...</p>
+          )}
+        </div>
+
         <Cart
           cartItems={cartItems}
           removeFromCart={removeFromCart}

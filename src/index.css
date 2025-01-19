@@ -1,1 +1,91 @@
- 
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Grid Layout for Products */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 16px; /* Spacing between items */
+    padding: 16px;
+    justify-items: center; /* Center cards horizontally */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-grid {
+      grid-template-columns: 1fr; /* 1 column for extra-small screens */
+    }
+  }
+  
+/* Product Card Styling */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Product Image */
+  .product-image {
+    width: 100%; /* Ensures the image fills the container's width */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px 8px 0 0; /* Optional: Rounded corners on the top */
+    overflow: hidden; /* Prevents overflow if the image is larger than the container */
+  }
+  
+  /* Product Info */
+  .product-info {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .product-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 12px;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
