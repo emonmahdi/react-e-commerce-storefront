@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { BsCart } from "react-icons/bs";
 import "./../styles/Navbar.css";
 
 const Navbar = () => {
@@ -30,12 +31,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            Cart
-          </Link>
-        </li>
-        <li>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            About
+            <BsCart />
           </Link>
         </li>
       </ul>

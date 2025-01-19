@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 import products from "./data/products";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div style={{ padding: "20px" }}>
         <h1>E-commerce Storefront</h1>
         <ProductList products={products} addToCart={addToCart} />
