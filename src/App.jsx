@@ -49,8 +49,7 @@ const App = () => {
     <>
       {/* <Navbar /> */}
       <div style={{ padding: "20px" }}>
-        <h1>E-commerce Storefront</h1>
-        <h1>Product List</h1>
+        <h2 style={{ textAlign: "center" }}>Features Product </h2>
         <div className="product-grid">
           {products?.length > 0 ? (
             products.map((product) => (
