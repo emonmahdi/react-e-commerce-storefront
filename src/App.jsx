@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductList from "./components/ProductList";
 import { useCart } from "./Provider/CartProvider";
+import Loading from "./shared/Loading";
 // import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -50,7 +51,8 @@ const App = () => {
               />
             ))
           ) : (
-            <p>Loading products...</p>
+            // <p>Loading products...</p>
+            <Loading />
           )}
         </div>
         {!showAll && (
