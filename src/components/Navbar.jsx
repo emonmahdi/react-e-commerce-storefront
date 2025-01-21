@@ -2,9 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsCart } from "react-icons/bs";
 import "./../styles/Navbar.css";
+import { useCart } from "../Provider/CartProvider";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { cartItems } = useCart();
+  console.log(cartItems);
+
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,8 +36,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            <BsCart />
+          <Link to="/cart" onClick={() => setIsMenuOpen(false)}>
+            <BsCart /> {totalItems}
           </Link>
         </li>
       </ul>

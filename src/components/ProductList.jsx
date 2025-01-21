@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 //
 const ProductList = ({ product, addToCart }) => {
-  console.log(product);
   const { title, images, price, stock } = product;
   return (
     <div className="product-card">
