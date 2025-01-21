@@ -1,12 +1,18 @@
 /* eslint-disable react/prop-types */
+
+import { Link } from "react-router-dom";
+import "./../styles/ProductList.css";
+
 //
 const ProductList = ({ product, addToCart }) => {
-  const { title, images, price, stock } = product;
+  const { id, title, images, price, stock } = product;
   return (
     <div className="product-card">
-      <img src={images[0]} alt={title} className="product-image" />
+      <img src={images[0]} alt={title} className="card_product-image" />
       <div className="product-info">
-        <h2 className="product-title">{title}</h2>
+        <Link to={`/product/${id}`} className="title-link">
+          <h2 className="product-title">{title}</h2>
+        </Link>
         <div className="price_stock">
           <div>
             <p className="product-price">${price}</p>
