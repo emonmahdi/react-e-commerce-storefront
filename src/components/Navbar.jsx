@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <h1>E-Commerce Store</h1>
+        <h1>E-Commerce</h1>
       </div>
       <button className="navbar-toggle" onClick={toggleMenu}>
         {isMenuOpen ? "✖" : "☰"}
