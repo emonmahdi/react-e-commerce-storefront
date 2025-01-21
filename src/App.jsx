@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+// import { ToastContainer } from "react-toastify";
 import ProductList from "./components/ProductList";
 // import Cart from "./components/Cart";
 import { useCart } from "./Provider/CartProvider";
@@ -72,6 +73,7 @@ const App = () => {
           updateQuantity={updateQuantity}
         /> */}
       </div>
+      {/* <ToastContainer /> */}
     </>
   );
 };

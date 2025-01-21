@@ -6,6 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import routes from "./routes/routes.jsx";
 import { CartProvider } from "./Provider/CartProvider.jsx";
 import { Home } from "./components/Home.jsx";
+import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
       <RouterProvider router={routes}>
         <Home />
       </RouterProvider>
+      <ToastContainer />
     </CartProvider>
   </StrictMode>
 );

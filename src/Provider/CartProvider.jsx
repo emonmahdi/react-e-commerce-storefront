@@ -2,6 +2,7 @@
 /* eslint-disable react-refresh/only-export-components */
 // context/CartContext.js
 import { createContext, useContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
@@ -18,8 +19,10 @@ export const CartProvider = ({ children }) => {
             : item
         )
       );
+      toast.info(`${product.title} quantity updated in the cart`);
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      toast.success(`added to the cart successfully`);
     }
   };
 
