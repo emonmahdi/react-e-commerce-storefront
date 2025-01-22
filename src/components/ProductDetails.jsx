@@ -50,19 +50,24 @@ const ProductDetails = () => {
               <h1 className="single-product-title">{product?.title}</h1>
               <p className="product-description">{product?.description}</p>
               <p className="product-brand">
-                Brand: <span>{product?.brand}</span>
+                <span style={{ fontWeight: "bold" }}>Brand: </span>{" "}
+                <span>{product?.brand}</span>
               </p>
               <p className="product-category">
-                Category: <span>{product?.category}</span>
+                <span style={{ fontWeight: "bold" }}>Category: </span>{" "}
+                <span>{product?.category}</span>
               </p>
               <p className="product-rating">
-                Rating: <span>{product?.rating} / 5</span>
+                <span style={{ fontWeight: "bold" }}>Rating: </span>{" "}
+                <span>{product?.rating} / 5</span>
               </p>
               <p className="product-price">
-                Price: <span>${product?.price?.toFixed(2)}</span>
+                <span style={{ fontWeight: "bold" }}>Price: </span>{" "}
+                <span>${product?.price?.toFixed(2)}</span>
               </p>
               <p className="product-discount">
-                Discount: <span>{product?.discountPercentage}% off</span>
+                <span style={{ fontWeight: "bold" }}>Discount: </span>{" "}
+                <span>{product?.discountPercentage}% off</span>
               </p>
               <div className="product-actions">
                 <button
