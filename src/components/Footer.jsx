@@ -22,13 +22,13 @@ const Footer = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/products">Products</a>
+              <a href="/">Products</a>
             </li>
             <li>
               <a href="/cart">Cart</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/">About</a>
             </li>
           </ul>
         </div>
@@ -36,9 +36,12 @@ const Footer = () => {
         {/* Contact Section */}
         <div className="footer-section contact">
           <h2>Contact Us</h2>
-          <p>Email: support@ecommerce.com</p>
-          <p>Phone: +123-456-7890</p>
-          <p>Address: 123 E-Shop Lane, Market City, Country</p>
+          <p>Email: developeremon1997@gmail.com</p>
+          <p>Phone: +88-01908-131513</p>
+          <p>
+            Address: Chowmatha Barisal, Oposit of Mohila TTC Barisal, Barisal
+            Sadar.
+          </p>
         </div>
       </div>
 
